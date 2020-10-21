@@ -2,10 +2,10 @@
 
 ## Introduction
 
-[Platform.sh](https://platform.sh) is a PaaS that lets you host your website in an easy and modern way.\
+<img src="https://platform.sh/logos/redesign/Platformsh_icon_black.svg" width="20" height="20"> [Platform.sh](https://platform.sh) is a PaaS that lets you host your website in an easy and modern way.\
 If you didn't already tested it, go on ! You'll adore it!
 
-[Lando](https://docs.lando.dev/) is an excellent local dev tool.\
+<img src="https://docs.lando.dev/images/hero-pink.png" width="20" height="20"> [Lando](https://docs.lando.dev/) is an excellent local dev tool.\
 In the last versions of Lando, the tool is now [compatible](https://docs.lando.dev/config/platformsh.html) with Platform.sh.
 
 You can use your Platform.sh' config files in Lando, without the need to modify them.
