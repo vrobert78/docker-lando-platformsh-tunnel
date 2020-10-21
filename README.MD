@@ -29,7 +29,7 @@ services:
     type: compose
     app_mount: false
     services:
-      image: vrobert78/platformsh-tunnel
+      image: vrobert78/lando-platformsh-tunnel
       command: ./entrypoint.sh
       environment:
         PLATFORM_PROJECT: your_project_id
