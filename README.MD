@@ -37,8 +37,10 @@ services:
         PLATFORM_APP: name_of_your_platformsh_app
         PLATFORM_RELATIONSHIP_NAME: name_of_the_relationship_you_want_to_connect
         PLATFORMSH_CLI_TOKEN: your_platformsh_api_token
+        RELATIONSHIP_PORT: exposed_port
+        LANDO_NEEDS_EXEC: DOEEET
       ports:
-        - 'exposed_port_by_your_relationship'
+        - 'exposed_port'
 ```
 
 Rebuild lando: `lando rebuild`
