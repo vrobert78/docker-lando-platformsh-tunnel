@@ -1,10 +1,45 @@
 #!/bin/bash
 set -e
 
-# Grab relationship port and host to use in SSH command.
-RELATIONSHIP_HOST=$(platform relationships -p $PLATFORM_PROJECT -e $PLATFORM_ENVIRONMENT -A $PLATFORM_APP -P ${PLATFORM_RELATIONSHIP_NAME}.0.host)
+if [[ -z $RELATIONSHIP_PORT ]];
+then
+  echo "RELATIONSHIP_PORT is not set, use the default value: 30000"
+  RELATIONSHIP_PORT="30000"
+fi
 
-echo "Don't forget to expose port $RELATIONSHIP_PORT in your docker-compose file!"
+if [[ -z $PLATFORMSH_CLI_TOKEN ]];
+then
+  echo "PLATFORMSH_CLI_TOKEN environment variable is missing."
+  exit 1
+fi
+
+if [[ -z $PLATFORM_PROJECT ]];
+then
+  echo "PLATFORM_PROJECT environment variable is missing."
+  exit 1
+fi
+
+if [[ -z $PLATFORM_ENVIRONMENT ]];
+then
+  echo "PLATFORM_ENVIRONMENT environment variable is missing."
+  exit 1
+fi
+
+if [[ -z $PLATFORM_APP ]];
+then
+  echo "PLATFORM_APP environment variable is missing."
+  exit 1
+fi
+
+if [[ -z $PLATFORM_RELATIONSHIP_NAME ]];
+then
+  echo "PLATFORM_RELATIONSHIP_NAME environment variable is missing."
+  exit 1
+fi
+
+
+
+echo "Don't forget to expose port $RELATIONSHIP_PORT in your .lando.yml file!"
 
 # Open SSH tunnel in foreground
-platform tunnel:single -p $PLATFORM_PROJECT -e $PLATFORM_ENVIRONMENT -A $PLATFORM_APP -r ${PLATFORM_RELATIONSHIP_NAME} -y
+platform tunnel:single --project=$PLATFORM_PROJECT --environment=$PLATFORM_ENVIRONMENT --app=$PLATFORM_APP --relationship=${PLATFORM_RELATIONSHIP_NAME} --port $RELATIONSHIP_PORT -y
