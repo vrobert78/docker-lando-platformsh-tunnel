@@ -37,7 +37,6 @@ services:
         PLATFORM_APP: name_of_your_platformsh_app
         PLATFORM_RELATIONSHIP_NAME: name_of_the_relationship_you_want_to_connect
         PLATFORMSH_CLI_TOKEN: your_platformsh_api_token
-        PATHSSHKEY: path_of_your_ssh_public_key
       ports:
         - 'exposed_port_by_your_relationship'
 ```
