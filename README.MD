@@ -2,7 +2,7 @@
 
 ## Introduction
 
-[Platform.sh](https://platform.sh) is a PaaS that lets you host your website in an easy way.\
+[Platform.sh](https://platform.sh) is a PaaS that lets you host your website in an easy and modern way.\
 If you didn't already tested it, go on ! You'll adore it!
 
 [Lando](https://docs.lando.dev/) is an excellent local dev tool.\
