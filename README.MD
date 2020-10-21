@@ -45,3 +45,5 @@ services:
 Rebuild lando: `lando rebuild`
 
 Then you can now connect to your distant relationship using his name `tunnel`
+
+You can verify if everything is OK: `lando logs -s tunnel`
