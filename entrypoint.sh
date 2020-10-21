@@ -8,7 +8,7 @@ RELATIONSHIP_HOST=$(platform relationships -p $PLATFORM_PROJECT -e $PLATFORM_ENV
 echo "Don't forget to expose port $RELATIONSHIP_PORT in your docker-compose file!"
 
 # Open SSH tunnel in foreground and print detailed logs.
-ssh -n -N -L \
+ssh -i $PATHSSHKEY -n -N -L \
   0.0.0.0:$RELATIONSHIP_PORT:$RELATIONSHIP_HOST:$RELATIONSHIP_PORT \
   $(platform ssh -p $PLATFORM_PROJECT -e $PLATFORM_ENVIRONMENT -A $PLATFORM_APP --pipe) \
   -o ServerAliveInterval=180 \
