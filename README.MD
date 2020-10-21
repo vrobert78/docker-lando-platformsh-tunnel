@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Platform.sh is a PaaS that lets you host your website in an easy way.\
+[Platform.sh](https://platform.sh) is a PaaS that lets you host your website in an easy way.\
 If you didn't already tested it, go on ! You'll adore it!
 
 [Lando](https://docs.lando.dev/) is an excellent local dev tool.\
@@ -15,7 +15,7 @@ You can use your Platform.sh' config files in Lando, without the need to modify 
 Using Lando gives you a local infrastructure to run your project. Usually, it's fine and sufficient.
 
 But it may arrive that you need to access data from your Platform.sh hosted version, from your production for instance.\
-In that case, you'll need to set up a tunnel between your local environment and your Platform.sh production environment.
+In that case, you'll need to set up a tunnel between your local environment and your Platform.sh production env.
 
 This docker image has been done for this purpose.
 
